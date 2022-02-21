@@ -6,12 +6,13 @@ import { ButtonBase } from '@mui/material';
 // project imports
 import config from 'config';
 import Logo from 'ui-component/Logo';
+import AALogo from 'ui-component/AALogo';
 
 // ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = () => (
     <ButtonBase disableRipple component={Link} to={config.defaultPath}>
-        <Logo />
+        <AALogo />
     </ButtonBase>
 );
 
