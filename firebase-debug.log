@@ -1,0 +1,69 @@
+[debug] [2022-02-28T08:18:47.803Z] ----------------------------------------------------------------------
+[debug] [2022-02-28T08:18:47.805Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\steve\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-02-28T08:18:47.805Z] CLI Version:   10.2.1
+[debug] [2022-02-28T08:18:47.805Z] Platform:      win32
+[debug] [2022-02-28T08:18:47.805Z] Node Version:  v16.14.0
+[debug] [2022-02-28T08:18:47.806Z] Time:          Mon Feb 28 2022 03:18:47 GMT-0500 (Eastern Standard Time)
+[debug] [2022-02-28T08:18:47.806Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-28T08:18:47.857Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"rewrites"}
+[debug] [2022-02-28T08:18:47.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-28T08:18:47.863Z] > authorizing via signed-in user (steve.casey@hill17.com)
+[debug] [2022-02-28T08:18:47.864Z] [iam] checking project aareact-e1d19 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-02-28T08:18:47.866Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aareact-e1d19:testIamPermissions [none]
+[debug] [2022-02-28T08:18:47.867Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aareact-e1d19:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-28T08:18:48.065Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aareact-e1d19:testIamPermissions 200
+[debug] [2022-02-28T08:18:48.066Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aareact-e1d19:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-28T08:18:48.067Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 [none]
+[debug] [2022-02-28T08:18:48.383Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 200
+[debug] [2022-02-28T08:18:48.383Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 {"projectId":"aareact-e1d19","projectNumber":"687413342496","displayName":"AAReact","name":"projects/aareact-e1d19","resources":{"hostingSite":"aareact-e1d19","storageBucket":"aareact-e1d19.appspot.com","locationId":"us-east1"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'aareact-e1d19'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-02-28T08:18:48.385Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 [none]
+[debug] [2022-02-28T08:18:48.677Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 200
+[debug] [2022-02-28T08:18:48.678Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aareact-e1d19 {"projectId":"aareact-e1d19","projectNumber":"687413342496","displayName":"AAReact","name":"projects/aareact-e1d19","resources":{"hostingSite":"aareact-e1d19","storageBucket":"aareact-e1d19.appspot.com","locationId":"us-east1"},"state":"ACTIVE"}
+[debug] [2022-02-28T08:18:48.681Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions [none]
+[debug] [2022-02-28T08:18:48.682Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-02-28T08:18:49.590Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions 200
+[debug] [2022-02-28T08:18:49.590Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions {"name":"projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[aareact-e1d19]: beginning deploy... 
+[info] i  hosting[aareact-e1d19]: found 46 files in build 
+[debug] [2022-02-28T08:18:50.044Z] [hosting] hash cache [YnVpbGQ] stored for 46 files
+[debug] [2022-02-28T08:18:50.044Z] [hosting][hash queue][FINAL] {"max":434,"min":6,"avg":45.32608695652174,"active":0,"complete":46,"success":46,"errored":0,"retried":0,"total":46,"elapsed":439}
+[debug] [2022-02-28T08:18:50.044Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd:populateFiles [none]
+[debug] [2022-02-28T08:18:50.045Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/favicon.ico":"b6aa7ceff097970409a814baba0c3bd8aa3448ca30fc6c6e16a609080ebc597a","/favicon.svg":"04c720d2a28db59bb61734f27c039caa964bba63a1a38e1cca39ebd386245611","/asset-manifest.json":"d2f2bf731e0666c9618ccef2b2d67f0af69213df240e3214ff45dc71d4fe38c4","/static/css/3.03ebe89f.chunk.css.map":"fca3dc04d3aaedd577b5d450832a4cc4f3138388aa715c06deb4f18ea3ad1b42","/static/css/3.03ebe89f.chunk.css":"c3bf84a3da1dc4e340e6b3367b0ed75f5fdfa19f08fa2e91d21f2836f86b74d2","/index.html":"cfed4f2e89bb8d5f5651b4d7c4f6ed50f17edef1cf5250f04fa08e9adceb6c86","/static/css/main.2e327239.chunk.css":"d16de0a56b2a5b79f72d8d14e169cea22f3baf26a120c6feaea3eccace9aba6e","/static/css/main.2e327239.chunk.css.map":"d5cb35c2721897ffc0c1f42be14f41595e943816bbce90468d0777e7d43f53a2","/static/js/10.885fd3da.chunk.js":"6cbd4f25b49ce8325702b70e1b3f28f67840058ba59f3e5505a2b8e563d740b2","/static/js/11.eb496514.chunk.js":"966ff5541e4b817fc66b65e223259835b95ffab801449da030cf76f8497aa682","/static/js/12.957e80f0.chunk.js":"4568d5e2d44b14f7b0d2d7b3308e9ac3b89fe6339d90d5e352f5de07ccc4e12d","/static/js/10.885fd3da.chunk.js.map":"d94788b1cb6f7ae159fda0e3a8958ccd27f7db8f3dda5001d25f0490b8c4a3f8","/static/js/11.eb496514.chunk.js.map":"a2e2ef7595711cf7f1c219f934c0a542c563fd83aad59f1792ce4d383503a867","/static/js/12.957e80f0.chunk.js.map":"51bb9f606323dc04c154c35de3e862239c682c45ad2426cf7ebf891ad6a9ba16","/static/js/14.1ea4b2eb.chunk.js":"065ca3c60f5a7f406bad6425b3ca8498fa5a11cf0dbdce0fa2a4e8a4b869d54a","/static/js/13.08354e72.chunk.js":"fed258b079a8fa720c5dd3a3cf7c2456eca7cce5c5abd53a4feeb74721253235","/static/js/14.1ea4b2eb.chunk.js.map":"a3764835566f55bb14de8ba62c4b6f166043c0959c5d1d9941ee461ec85c8adb","/static/js/3.501604cc.chunk.js.LICENSE.txt":"5a2c262e7465f41a0033ba5a27635792a4cb45bee97d1d044d4e69394bd4efed","/static/js/4.360a5f90.chunk.js.LICENSE.txt":"be4ca401448fd10921760685fd12d710f37f98ca3125f97a3ad8ce821c267ba2","/static/js/5.59c0b15c.chunk.js":"121045673457c3ab9a0481c4641ba788885dde39a5e6f4405ada37d3bd2bc00f","/static/js/5.59c0b15c.chunk.js.map":"b28de9a63ad7283c0c732cdbcfc52e160b3e010cb36b6f61c7ae0aa2ba9950c6","/static/js/6.f9463669.chunk.js":"d86d9e6ee3c50a5cde707764929e38a97beae4477c426619cdea812885bc9637","/static/js/7.833494a0.chunk.js.LICENSE.txt":"9ea3a8ee19f24958b79f2863bf8345556869c97dc044502e1d31f2c8f7b33f3e","/static/js/6.f9463669.chunk.js.map":"0b93c10c066e122ae1cefa9befa94cd9876c279c5494041e6832cf674c81c08a","/static/js/8.252a31c7.chunk.js":"26f5d81fd1fca199afa31b8ff2d7f273f553eccbab7b61733f54b7b4ff8843f6","/static/js/8.252a31c7.chunk.js.map":"30b9bc687e9838977887d535d057f1d0bfb106e645e7dec85bacbc60338af601","/static/js/9.d1269042.chunk.js":"8501da4c1c8c4370c221038a2aa62b5f1364b54cbd5b123ba0263b306592161b","/static/js/9.d1269042.chunk.js.map":"8e6fc9624025472a3c964cfc20003aeca54a1be44a95225260daf504ab593a57","/static/js/runtime-main.ac709849.js":"a09f50f3d7b08629196606e697cccb094d0a8bf7745086846fb1dd10cb4b0335","/static/js/main.cf6049a1.chunk.js":"52bf2dd9de6f286f9f9ada65e45ab67e86a4e49f20db258a7eef246f8b312565","/static/media/aalogo.5969fb1a.png":"7f6469f4ab445cc60beff500264d9b3658e9abf9ed4d726adb7936fc19ab5579","/static/media/earning.00f461a5.svg":"fd2770ee6b2332e88cf9ed61f0b060043f8156b6c6a23d1f1b9d5dda0ff76f51","/static/media/social-google.a57081bd.svg":"38d5e7623171527cb3ad0229027a195775ded7336509f93d3a8f0af6db7b28ea","/static/js/runtime-main.ac709849.js.map":"1ff2602f099e34161e3364f7e7c0184223a60ff069c0aec67827cd35d07bf151","/static/js/13.08354e72.chunk.js.map":"2002b02a23ccfc3e9d4f4823456475b516b05a0de7d38a91319bc83c6766ffd1","/static/js/0.fc504b6f.chunk.js":"a8a0ed93fd7756de3a761f26a482fa8798bfe10189e3f598088be12a0f914a10","/static/js/7.833494a0.chunk.js":"35fb74f382a0cc657fc81b9885f37f98af7e640acd2ce631f4118922494cff13","/static/js/main.cf6049a1.chunk.js.map":"9af04833c0a1f28325f7920123317d80440db8417123d90a520f10f32c56c3d6","/static/media/user-round.27fe79b1.svg":"56f7235347c12a098f85b85c76c9615d2feb64e667c8d5ced9241bc17a22bbfa","/static/js/4.360a5f90.chunk.js":"b3bc4465994a02d800804ac0481add5a2106173463c711ac93347115ca8d8a45","/static/js/0.fc504b6f.chunk.js.map":"73e363890d16ec358033fd2870d37c724e36344340f776c8d171925708d87877","/static/js/3.501604cc.chunk.js":"191425ce9f9d5ef514736c03ca93fb80d5ae9f6ebcb47b1ef49f70ae20b75c63","/static/js/7.833494a0.chunk.js.map":"77f45519a0649262a69390209e720ab33e65e3fb14f94a776ab7993fc8da297d","/static/js/4.360a5f90.chunk.js.map":"b7e1784ed21b424ed2a37ae1c6a1479f3faf1c904aa2ac39116a7f4b624f0ed3","/static/js/3.501604cc.chunk.js.map":"19534c4031cf1d1754583065d36c2de68420e5c305ce70491c2c5d4e5c3776b3"}}
+[debug] [2022-02-28T08:18:50.627Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd:populateFiles 200
+[debug] [2022-02-28T08:18:50.628Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/aareact-e1d19/versions/7f27d8a9c37a38fd/files"}
+[debug] [2022-02-28T08:18:50.628Z] [hosting][populate queue][FINAL] {"max":585,"min":585,"avg":585,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":585}
+[debug] [2022-02-28T08:18:50.629Z] [hosting] uploads queued: 0
+[debug] [2022-02-28T08:18:50.629Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1646036330629}
+[info] +  hosting[aareact-e1d19]: file upload complete 
+[debug] [2022-02-28T08:18:50.629Z] [hosting] deploy completed after 1038ms
+[debug] [2022-02-28T08:18:50.630Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "aareact-e1d19"
+    },
+    "site": "aareact-e1d19",
+    "version": "projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd"
+  }
+]
+[info] i  hosting[aareact-e1d19]: finalizing version... 
+[debug] [2022-02-28T08:18:50.633Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd updateMask=status
+[debug] [2022-02-28T08:18:50.633Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd {"status":"FINALIZED"}
+[debug] [2022-02-28T08:18:51.145Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd 200
+[debug] [2022-02-28T08:18:51.146Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd {"name":"projects/687413342496/sites/aareact-e1d19/versions/7f27d8a9c37a38fd","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-02-28T08:18:49.534594Z","createUser":{"email":"steve.casey@hill17.com"},"finalizeTime":"2022-02-28T08:18:51.599313Z","finalizeUser":{"email":"steve.casey@hill17.com"}}
+[debug] [2022-02-28T08:18:51.148Z] [hosting] finalized version for aareact-e1d19:[object Object]
+[info] +  hosting[aareact-e1d19]: version finalized 
+[info] i  hosting[aareact-e1d19]: releasing new version... 
+[debug] [2022-02-28T08:18:51.152Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/releases versionName=projects%2F687413342496%2Fsites%2Faareact-e1d19%2Fversions%2F7f27d8a9c37a38fd
+[debug] [2022-02-28T08:18:51.152Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/releases {"message":null}
+[debug] [2022-02-28T08:18:51.638Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/687413342496/sites/aareact-e1d19/releases 200
